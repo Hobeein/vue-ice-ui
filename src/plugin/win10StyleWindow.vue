@@ -40,6 +40,7 @@
 </template>
 
 <script>
+import animateCss from 'animate.css'
 import windowHeadBar from './pluginComponent/window-head-bar'
 const win10StyleWindow = {
     name: 'win10StyleWindow',

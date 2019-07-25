@@ -1,0 +1,54 @@
+{
+  "name": "win10style_plugin_project",
+  "description": "it's a vue plugin project that will be soon public to npm",
+  "version": "1.0.0",
+  "author": "HwangBin <hwangbing@foxmail.com>",
+  "license": "MIT",
+  "private": false,
+  "keywords": [
+    "vue",
+    "Vue",
+    "VUE",
+    "WINDOW",
+    "WINDOWS",
+    "windows",
+    "window",
+    "Windows",
+    "Window",
+    "Style",
+    "style"
+  ],
+  "bugs": {
+    "email": "hwangbing@foxmail.com"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.19",
+    "@fortawesome/free-regular-svg-icons": "^5.9.0",
+    "@fortawesome/free-solid-svg-icons": "^5.9.0",
+    "@fortawesome/vue-fontawesome": "^0.1.6",
+    "animate.css": "^3.7.2",
+    "vue": "^2.5.11"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "cross-env": "^5.0.5",
+    "css-loader": "^0.28.7",
+    "file-loader": "^1.1.4",
+    "vue-loader": "^13.0.5",
+    "vue-template-compiler": "^2.4.4",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
+  }
+}

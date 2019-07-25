@@ -1,0 +1,127 @@
+<template>
+  <div id="app">
+    <img src="./assets/logo.png">
+    <h1>{{ msg }}</h1>
+    <h2>Essential Links</h2>
+    <ul>
+      <li><a
+          href="https://vuejs.org"
+          target="_blank"
+        >Core Docs</a></li>
+      <li><a
+          href="https://forum.vuejs.org"
+          target="_blank"
+        >Forum</a></li>
+      <li><a
+          href="https://chat.vuejs.org"
+          target="_blank"
+        >Community Chat</a></li>
+      <li><a
+          href="https://twitter.com/vuejs"
+          target="_blank"
+        >Twitter</a></li>
+    </ul>
+    <h2>Ecosystem</h2>
+    <ul>
+      <li><a
+          href="http://router.vuejs.org/"
+          target="_blank"
+        >vue-router</a></li>
+      <li><a
+          href="http://vuex.vuejs.org/"
+          target="_blank"
+        >vuex</a></li>
+      <li><a
+          href="http://vue-loader.vuejs.org/"
+          target="_blank"
+        >vue-loader</a></li>
+      <li><a
+          href="https://github.com/vuejs/awesome-vue"
+          target="_blank"
+        >awesome-vue</a></li>
+    </ul>
+
+    <win10-style-window
+      v-for="(item, index) in windowCount"
+      :key="index"
+      :ref="'window_' + index"
+      :identity="index"
+      :top="100"
+      :left="100"
+      :width="700"
+      :height="600"
+      :setAnimateTime="350"
+      @closeListener="afterClose"
+      @minimizeListener="afterMinimize"
+    >
+      <div>
+        <span>
+          <a href="http://www.soushu555.com">这是一个搜书吧的跳转</a>
+        </span>
+      </div>
+    </win10-style-window>
+    <button @click="handleBtnClick">弹出一个窗口</button>
+    <button @click="handleMinimizeRevert">回复被最小化的窗口</button>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'app',
+  data () {
+    return {
+      msg: 'Welcome to Your Vue.js App',
+      windowCount: []
+    }
+  },
+  methods: {
+    handleBtnClick: function() {
+      this.windowCount.push(1)
+      // this.$el.appendChild(node)
+    },
+    afterClose(index){
+      console.log(index)
+      this.$delete(this.windowCount, index)
+    },
+    handleMinimizeRevert(ev, identity = 0) {
+      this.$refs['window_' + identity][0].minimizeRevert()
+    },
+    afterMinimize(identity) {
+      console.log("执行最小化后返回一个'identity',即身份验证值\n", identity)
+      // setTimeout(() => {
+      //   this.handleMinimizeRevert('', identity)
+      // }, 350)
+    }
+  }
+}
+</script>
+
+<style>
+#app {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+h1,
+h2 {
+  font-weight: normal;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+a {
+  color: #42b983;
+}
+</style>

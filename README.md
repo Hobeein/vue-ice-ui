@@ -46,4 +46,4 @@ Vue.use(vueIceUI)
 # vue-ice-ui
 
 It's a collection of computer desktop-style plugins for vue  
-我励志要将这个项目要做成PC桌面风格的vue UI框架 (日后会慢慢实现的!)
+这个项目将要做成PC桌面风格的vue UI框架 (日后会慢慢实现的!)

@@ -2,6 +2,8 @@
 # win10style_plugin_project
 
 > it's a vue plugin project that will be soon public to npm
+> It's a project still under construction, pleace make sure you really want to download before downloading
+> github: https://github.com/Hobeein/vue-ice-ui
 
 ## Build Setup
 
@@ -20,4 +22,4 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 =======
 # vue-ice-ui
 it's a collection of computer desktop-style plugins for vue
->>>>>>> 7ed451dd54bfd9732fd8019d055a1533c77860bf
+> 7ed451dd54bfd9732fd8019d055a1533c77860bf

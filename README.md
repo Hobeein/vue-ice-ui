@@ -26,9 +26,9 @@ npm i vue-ice-ui
 // 在main.js中进行如下设置
 
 import Vue from 'vue'
-import animateCss from 'animate.css'
+import vueIceUI from 'vue-ice-ui'
 
-Vue.use(animateCss)
+Vue.use(vueIceUI)
 
 ```
 ``` html

@@ -10,21 +10,36 @@
 
 > github: https://github.com/Hobeein/vue-ice-ui  
 
-## Build Setup
+## Usage  用法
 
 ``` bash
 
-# install dependencies
+# install vue-ice-ui  
+# 如下指令，下载插件
 
-npm install
+npm i vue-ice-ui
 
-# serve with hot reload at localhost:8080
+```
+``` javascript
 
-npm run dev
+// setting in main.js  
+// 在main.js中进行如下设置
 
-# build for production with minification
+import Vue from 'vue'
+import animateCss from 'animate.css'
 
-npm run build
+Vue.use(animateCss)
+
+```
+``` html
+
+<!-- usage in component -->  
+<!-- 在组件中使用 -->
+<template>
+    <div>
+        <win10-style-window :identity="index">text in here</win10-style-window>
+    </div>
+</template>
 
 ```
 

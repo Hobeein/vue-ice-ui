@@ -37,7 +37,7 @@ Vue.use(animateCss)
 <!-- 在组件中使用 -->
 <template>
     <div>
-        <win10-style-window :identity="index">text in here</win10-style-window>
+        <win10-style-window :identity="index">Text or HTML in here</win10-style-window>
     </div>
 </template>
 

@@ -41,6 +41,8 @@
 
 <script>
 import windowHeadBar from './pluginComponent/window-head-bar'
+import animateCss from 'animate.css'
+
 const win10StyleWindow = {
     name: 'win10StyleWindow',
     props: {
@@ -69,7 +71,7 @@ const win10StyleWindow = {
         },
         setAnimateTime: {
             type: Number,
-            default: 1500
+            default: 500
         },
         customContent: {
             type: String
@@ -264,12 +266,11 @@ const win10StyleWindow = {
             bind: function(el) {
                 el.onmousedown = (e) => {
                     const thisWindow = el.parentNode
-                    const windowParent = thisWindow.parentNode
-                    console.log(windowParent)
+                    const windowParent = thisWindow.offsetParent
                     let ox = e.offsetX
                     let oy = e.offsetY
+                    console.log(windowParent)
                     document.onmousemove = (e) => {
-                        console.log(windowParent.offsetLeft, windowParent.offsetTop)
                         let cx = e.clientX - windowParent.offsetLeft
                         let cy = e.clientY - windowParent.offsetTop
                         let left = cx - ox

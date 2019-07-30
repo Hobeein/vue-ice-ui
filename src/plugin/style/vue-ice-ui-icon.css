@@ -1,0 +1,12 @@
+.ice-icon{
+    position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    top: 3px;
+}
+.flie-sm{
+    background-image: url('../image/icon/flie_18px.png')
+}

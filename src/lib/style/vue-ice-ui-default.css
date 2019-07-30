@@ -1,0 +1,60 @@
+.ice-caret-transparent{
+    display: inline-block;
+    height: 0px;
+    border-top: 6px solid #00000000;
+    border-right: 5px solid #00000000;
+    border-bottom: 6px solid #00000000;
+    border-left: 5px solid #00000000;
+    position: relative;
+}
+.ice-caret-down{
+    display: inline-block;
+    height: 0px;
+    border-top: 6px solid #000000;
+    border-right: 5px solid #00000000;
+    border-left: 5px solid #00000000;
+    position: relative;
+    top: 3px;
+    left: -2px;
+}
+.ice-caret-up{
+    display: inline-block;
+    height: 0px;
+    border-right: 5px solid #00000000;
+    border-bottom: 6px solid #000000;
+    border-left: 5px solid #00000000;
+    position: relative;
+    top: -3px;
+    left: -2px;
+}
+.ice-caret-left{
+    display: inline-block;
+    height: 0px;
+    border-top: 5px solid #00000000;
+    border-right: 6px solid #000000;
+    border-bottom: 5px solid #00000000;
+    position: relative;
+    left: -2px;
+}
+.ice-caret-right{
+    display: inline-block;
+    height: 0px;
+    border-top: 5px solid #00000000;
+    border-bottom: 5px solid #00000000;
+    border-left: 6px solid #000000;
+    position: relative;
+}
+.ice-clockwise-rotate90{
+    transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+}
+.ice-anticlockwise-rotate90{
+    transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+}

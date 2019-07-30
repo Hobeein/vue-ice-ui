@@ -1,9 +1,11 @@
-import win10Window from './win10StyleWindow.vue'
+import iceWindow from './IceWindow.vue'
+import iceTreeView from './IceTreeView.vue'
 
-let winXWindow = {
+let vue_ice_ui = {
     install: function (Vue, options) {
-        Vue.component(win10Window.name, win10Window)
+        Vue.component(iceWindow.name, iceWindow)
+        Vue.component(iceTreeView.name, iceTreeView)
     }
 }
 
-export default winXWindow
+export default vue_ice_ui

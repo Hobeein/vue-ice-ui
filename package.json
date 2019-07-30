@@ -2,10 +2,18 @@
   "name": "vue-ice-ui",
   "description": "it's a collection of computer desktop-style plugins for vue",
   "version": "1.0.7",
-  "author": "HwangBin (github: https://github.com/Hobeein) <hwangbing@foxmail.com>",
+  "author": {
+    "name": "HwangBin",
+    "email": "hwangbing@foxmail.com",
+    "url": "https://github.com/Hobeein"
+  },
   "license": "MIT",
   "main": "dist/iceUI.js",
   "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hobeein/vue-ice-ui.git"
+  },
   "keywords": [
     "vue",
     "windows",

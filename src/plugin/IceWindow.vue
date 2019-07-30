@@ -6,7 +6,7 @@
   -o-user-select: none;
   -ms-user-select: none;
 }
-.win10-style-window {
+.ice-window {
   position: absolute;
   background-color: white;
   box-shadow: 0 0 10px 0 rgba(140, 157, 185, 0.41);
@@ -23,7 +23,7 @@
   >
     <div
       v-show="windowShow"
-      class="win10-style-window"
+      class="ice-window"
       :style="windowShowStyle"
     >
       <window-head-bar
@@ -40,11 +40,11 @@
 </template>
 
 <script>
-import windowHeadBar from './pluginComponent/window-head-bar'
+import windowHeadBar from './pluginComponent/iceWindow/window-head-bar'
 import animateCss from 'animate.css'
 
-const win10StyleWindow = {
-    name: 'win10StyleWindow',
+const IceWindow = {
+    name: 'IceWindow',
     props: {
         width: {
             type: Number,
@@ -174,23 +174,32 @@ const win10StyleWindow = {
     },
     data: function() {
         return {
+            /* 窗口显示值 */
             windowShow: false,
+            /* 窗口上一次的显示状态保存 */
             lastWidth: 500,
             lastHeight: 400,
             lastTop: 0,
             lastLeft: 0,
+            /* 窗口宽高 */
             width_data: 500,
             height_data: 400,
+            /* 窗口标题 */
             title_data: "Vue的桌面风格窗口插件",
+            /* 窗口左右距离 */
             top_data: 0,
             left_data: 0,
+            /* 唯一身份验证 */
             identity_data: '',
+            /* 动画时间 */
             setAnimateTime_data: 1500,
+            /* 设置动画效果 */
             enterZoom: 'zoomIn',
             leaveZoom: 'zoomOut'
         }
     },
     methods: {
+        /* 隐藏的动画切换 */
         animateZoomChange(status) {
             if(status === 'mini'){
                 this.enterZoomProp = 'zoomInUp'
@@ -200,6 +209,7 @@ const win10StyleWindow = {
                 this.leaveZoomProp = 'zoomOut'
             }
         },
+        /* 关闭窗口 */
         afterCloseClick(){
             let id = ((this.identityProp === undefined || this.identityProp === null || this.identityProp === "") ? "none identity set" : this.identityProp)
             this.windowShow = false
@@ -208,6 +218,7 @@ const win10StyleWindow = {
                 this.$el.remove(0)
             }, this.setAnimateTimeProp)
         },
+        /* 最大化以及还原 */
         maximizeBtnClick(flag){
             if(flag === 'square'){
                 // 最大化
@@ -227,11 +238,13 @@ const win10StyleWindow = {
                 this.leftProp = this.lastLeft
             }
         },
+        /* 最小化 */
         minimizeBtnClick() {
             this.animateZoomChange('mini')
             this.windowShow = false
             this.$emit('minimizeListener', this.identityProp)
         },
+        /* 最小化还原 */
         minimizeRevert(){
             this.windowShow = true
             setTimeout(() => {
@@ -258,8 +271,8 @@ const win10StyleWindow = {
         this.left_data = this.left
         this.identity_data = this.identity
         this.setAnimateTime_data = this.setAnimateTime
-        win10StyleWindow.positionX = this.left
-        win10StyleWindow.positionY = this.top
+        IceWindow.positionX = this.left
+        IceWindow.positionY = this.top
     },
     directives: {
         drag: {
@@ -269,14 +282,13 @@ const win10StyleWindow = {
                     const windowParent = thisWindow.offsetParent
                     let ox = e.offsetX
                     let oy = e.offsetY
-                    console.log(windowParent)
                     document.onmousemove = (e) => {
                         let cx = e.clientX - windowParent.offsetLeft
                         let cy = e.clientY - windowParent.offsetTop
                         let left = cx - ox
                         let top = cy - oy
-                        win10StyleWindow.positionX = left
-                        win10StyleWindow.positionY = top
+                        IceWindow.positionX = left
+                        IceWindow.positionY = top
                         thisWindow.style.left = left + 'px'
                         thisWindow.style.top = top + 'px'
                     }
@@ -289,5 +301,5 @@ const win10StyleWindow = {
         }
     }
 }
-export default win10StyleWindow
+export default IceWindow
 </script>

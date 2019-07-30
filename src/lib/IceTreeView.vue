@@ -1,6 +1,4 @@
 <style>
-@import url("../assets/style/vue-ice-ui-default.css");
-@import url("../assets/style/vue-ice-ui-icon.css");
 .ice-tree-view {
   position: relative;
   text-align: left;
@@ -98,6 +96,8 @@
   </ul>
 </template>
 <script>
+import iconCss from '../assets/style/vue-ice-ui-icon.css'
+import defaultCss from '../assets/style/vue-ice-ui-default.css'
 const IceTreeView = {
     name: 'IceTreeView',
     props: {

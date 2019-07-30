@@ -1,9 +1,10 @@
 <style>
-@import url("style/vue-ice-ui-default.css");
-@import url("style/vue-ice-ui-icon.css");
+@import url("../assets/style/vue-ice-ui-default.css");
+@import url("../assets/style/vue-ice-ui-icon.css");
 .ice-tree-view {
   position: relative;
   text-align: left;
+  padding: 0;
 }
 .ice-tree-view > li {
   display: block;
@@ -125,16 +126,22 @@ const IceTreeView = {
     methods: {
       listToggle(index, el) {
         let isRotate = false
-        for(let i of el.target.classList){
+        let elm
+        if(el.target.children.length > 0){
+          elm = el.target.children[0]
+        }else{
+          elm = el.target
+        }
+        for(let i of elm.classList){
           if(i === 'ice-clockwise-rotate90'){
             isRotate = true
           }
         }
         if(isRotate){
-          el.target.classList.remove('ice-clockwise-rotate90')
+          elm.classList.remove('ice-clockwise-rotate90')
           this.dataCpt[index].isShow = false
         }else{
-          el.target.classList.add('ice-clockwise-rotate90')
+          elm.classList.add('ice-clockwise-rotate90')
           this.dataCpt[index].isShow = true
         }
       },

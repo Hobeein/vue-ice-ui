@@ -55,18 +55,20 @@
           :style="{ paddingLeft: (leftMultiplierCpt * 23) + 'px' }"
         >
           <div
+            v-if="item.children != undefined && item.children != null && item.children != null && item.children.length > 0"
             class="list-caret"
             @click="listToggle(index, $event)"
           >
             <span
-              v-if="item.children != undefined && item.children != null && item.children != null && item.children.length > 0"
               class="ice-caret-right"
               style="transition: all 0.2s;"
             ></span>
-            <span
-              v-else
-              class="ice-caret-transparent"
-            ></span>
+          </div>
+          <div
+            v-else
+            class="list-caret"
+          >
+            <span class="ice-caret-transparent"></span>
           </div>
           <div
             class="list-item-body"
@@ -81,11 +83,11 @@
           @before-leave="beforeItemLeave"
         >
           <div
+            v-if="item.children != undefined && item.children != null && item.children != '' && item.children != []"
             class="list-children"
             v-show="item.isShow"
           >
             <ice-tree-view
-              v-if="item.children != undefined && item.children != null && item.children != null"
               :data="item.children"
               :leftMultiplier="leftMultiplierCpt + 1"
             />

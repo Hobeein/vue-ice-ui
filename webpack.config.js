@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/lib/index.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: './dist/',
+    publicPath: '../dist/',
     filename: 'iceUI.js',
     library: 'vue-ice-ui',
     libraryTarget: 'umd',

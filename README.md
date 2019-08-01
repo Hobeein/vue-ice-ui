@@ -36,18 +36,18 @@ Vue.use(vueIceUI)
 <!-- usage in component -->  
 <!-- 在组件中使用 -->
 <template>
-    <div>
-        <ice-window
-            :identity="id" <!-- REQUIRED -->
-            :width="800"   <!-- type: Number & default 500px -->
-            :height="600"  <!-- type: Number & default 400px -->
-            :title="window's title" <!-- type: String -->
-            :top="50"      <!-- type: Number -->
-            :left="100"    <!-- type: Number -->
-            :setAnimateTime="1000"  
-            <!-- type: Number | Unit of time: ms & default 500ms -->
-            >Text or HTML in here</ice-window>
-    </div>
+  <div>
+    <ice-window
+      :identity="id" <!-- REQUIRED -->
+      :width="800"   <!-- type: Number & default 500px -->
+      :height="600"  <!-- type: Number & default 400px -->
+      :title="window's title" <!-- type: String -->
+      :top="50"      <!-- type: Number -->
+      :left="100"    <!-- type: Number -->
+      :setAnimateTime="1000"
+      <!-- type: Number | Unit of time: ms & default 500ms -->
+    >Text or HTML in here</ice-window>
+  </div>
 </template>
 
 ```

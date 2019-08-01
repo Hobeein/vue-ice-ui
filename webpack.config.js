@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/lib/index.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '../dist/',
+    publicPath: '/dist/',
     filename: 'iceUI.js',
     library: 'vue-ice-ui',
     libraryTarget: 'umd',
@@ -35,8 +35,9 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file-loader',
+        loader: 'url-loader',
         options: {
+          limit: 1048576,
           name: '[name].[ext]?[hash]'
         }
       }

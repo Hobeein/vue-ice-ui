@@ -12,6 +12,7 @@
 }
 .data-list-view table th,
 .data-list-view table td {
+  box-sizing: content-box;
   text-align: left;
   overflow: hidden;
   white-space: nowrap;
@@ -161,6 +162,7 @@ const DataListView = {
       const resizeDivDOM = document.getElementsByClassName('resizeCtrl')
       for (const i of resizeDivDOM) {
         i.onmousedown = function(ev) {
+          ev.stopPropagation()
           const getTable = document.getElementsByClassName('data-list-view')[0].querySelector('table')
           let getTableWidth = Number.parseInt(getTable.style.width.split('+')[1])
           const getIdNumber = Number.parseInt(this.getAttribute('id').split('_')[1])

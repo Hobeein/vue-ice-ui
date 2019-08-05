@@ -264,9 +264,9 @@ const IceWindow = {
     },
     mounted: function() {
         this.windowShow = true
-        const elm = document.getElementsByClassName(this.$el.className)
+        const elm = document.getElementsByClassName(this.$el.getAttribute('class'))
         const count = elm.length
-        if(count !== 1){
+        if(count > 1){
             this.$nextTick(() => {
                 const lastTop = elm[count-2].style.top || 0
                 const lastLeft = elm[count-2].style.left || 0

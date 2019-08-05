@@ -226,6 +226,7 @@ const IceWindow = {
             setTimeout(() => {
                 this.$emit("closeListener", id)
                 this.$el.remove()
+                this.$destroy()
             }, this.setAnimateTimeProp)
         },
         /* 最大化以及还原 */

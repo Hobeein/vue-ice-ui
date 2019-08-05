@@ -234,8 +234,8 @@ const IceWindow = {
                 // 最大化
                 this.lastWidth = this.widthProp
                 this.lastHeight = this.heightProp
-                this.lastTop = win10StyleWindow.positionY
-                this.lastLeft = win10StyleWindow.positionX
+                this.lastTop = IceWindow.positionY
+                this.lastLeft = IceWindow.positionX
                 this.widthProp = window.innerWidth
                 this.heightProp = window.innerHeight
                 this.topProp = 0

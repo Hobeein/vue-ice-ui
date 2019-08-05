@@ -50,6 +50,7 @@
     <table
       cellspacing="0"
       :style="{tableLayout: 'fixed', width: 'calc(80% + 0px)'}"
+      @click.stop="() => {}"
     >
       <thead>
         <tr>

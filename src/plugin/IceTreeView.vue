@@ -113,16 +113,16 @@ const IceTreeView = {
     },
     data: function() {
         return {
-            dataSet: [],
-            dataItem: {
-              id: "唯一标识",
-              icon: "flie",
-              prop: "属性名",
-              title: "显示名",
-              isShow: false,
-              children: []
-            },
-            leftMultiplierSet: 0
+          dataSet: [],
+          dataItem: {
+            id: "唯一标识",
+            icon: "folder",
+            prop: "属性名",
+            title: "显示名",
+            isShow: false,
+            children: []
+          },
+          leftMultiplierSet: 0
         }
     },
     methods: {
@@ -171,7 +171,7 @@ const IceTreeView = {
     computed: {
         dataCpt: {
             get(){
-                return this.dataSet
+              return this.dataSet
             },
             set(now){
               this.dataSet = now

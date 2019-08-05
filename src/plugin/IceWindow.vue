@@ -10,9 +10,17 @@
   position: absolute;
   background-color: white;
   box-shadow: 0 0 10px 0 rgba(140, 157, 185, 0.41);
+  z-index: 998;
+  display: flex;
+  flex-flow: row wrap;
 }
 .head-bar {
   cursor: move;
+}
+.window-content {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 40px);
 }
 </style>
 
@@ -34,7 +42,9 @@
         @maximize-click="maximizeBtnClick"
         @minimize-click="minimizeBtnClick"
       />
-      <slot />
+      <div class="window-content">
+        <slot />
+      </div>
     </div>
   </transition>
 </template>

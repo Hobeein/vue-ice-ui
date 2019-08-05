@@ -109,7 +109,7 @@ export default {
             color: 'white'
         },
         mouseOutStyle: {
-            backgroundColor: '#00000000',
+            backgroundColor: 'rgba(0, 0, 0, 0)',
             color: 'black'
         }
       }

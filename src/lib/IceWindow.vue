@@ -236,8 +236,8 @@ const IceWindow = {
                 this.lastHeight = this.heightProp
                 this.lastTop = IceWindow.positionY
                 this.lastLeft = IceWindow.positionX
-                this.widthProp = window.innerWidth
-                this.heightProp = window.innerHeight
+                this.widthProp = this.$el.offsetParent.offsetWidth
+                this.heightProp = this.$el.offsetParent.offsetHeight
                 this.topProp = 0
                 this.leftProp = 0
             }else{

@@ -5,6 +5,7 @@
   height: 100%;
 }
 .data-content-view .contentView-item {
+  box-sizing: content-box;
   position: relative;
   width: calc(100% - 35px);
   height: 32px;
